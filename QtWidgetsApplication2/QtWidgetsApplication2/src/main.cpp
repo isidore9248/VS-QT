@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 	//设置窗口固定大小
 	w.setFixedSize(400, 300);
 
-	qDebug() << "Hello world";
+	qDebug().noquote() << "Hello world";
 
 	w.show();
 

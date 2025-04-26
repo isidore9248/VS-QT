@@ -3,8 +3,9 @@
  * @Version: v1.0.0
  * @Author: isidore-chen
  * @Date: 2025-04-26 12:55:00
- * @Copyright: Copyright (c) 2024 CAUC
+ * @Copyright: Copyright (c) 2025 CAUC
 -->
+
 # QTvsProject
 
 ## 开发环境
@@ -24,6 +25,20 @@
     2. vs + Qt开发时qDebug()打印到“输出”窗口
     ```
     https://blog.csdn.net/noon1252/article/details/138762248
+    ```
+    3. include目录位置
+    ```
+  ...\QtWidgetsApplication2\      ← .sln所在目录
+    ├── QtWidgetsApplication2\                 ← .vcxproj所在目录
+    │   ├── src\                               ← 源代码目录
+    │   │   ├── main.cpp
+    │   │   └── xxx.h
+    │   └── QtWidgetsApplication2.vcxproj
+    └── QtWidgetsApplication2.sln
+    ```
+    本项目路径基于 .vcxproj 文件存放，添加```Debug | x64``` 下的包含目录 
+    ```
+    $(ProjectDir)src
     ```
 ## 学习笔记
 - 参考  note.txt    

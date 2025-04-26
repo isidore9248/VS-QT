@@ -13,10 +13,10 @@ void SignalRecv::signalRecv()
 
 void SignalRecv::signalRecv(QString recvString)
 {
-	qDebug() << "recvString:" << recvString;
-	qDebug() << "signalRecv";
-	qDebug() << "signalRecv(QString recvString)";
-	qDebug() << "signalRecv(QString recvString)";
+	qDebug().noquote() << "recvString:" << recvString;
+	qDebug().noquote() << "signalRecv";
+	qDebug().noquote() << "signalRecv(QString recvString)";
+	qDebug().noquote() << "signalRecv(QString recvString)";
 	QPushButton btn;
 
 	btn.setWindowTitle(recvString);

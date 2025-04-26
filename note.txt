@@ -26,3 +26,8 @@
 			void valueChanged(int newValue, bool modified);
 			void handleValueChange(bool value); --- 错误
 			void handleValueChange(int newValue); --- 正确
+
+5、非模态对话框需要在show之前设置属性：
+	dia->setAttribute(Qt::WA_DeleteOnClose);	//设置关闭时自动删除
+	//非模态对话框只有在父类窗口关闭时才会被销毁
+	//但是如果只关闭对话框，父类窗口不关闭，则一直不会销毁，造成内存泄漏
