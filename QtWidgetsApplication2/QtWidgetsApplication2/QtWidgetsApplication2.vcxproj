@@ -61,6 +61,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <IncludePath>F:\QTvsProject\QtWidgetsApplication2\QtWidgetsApplication2\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
   </PropertyGroup>
@@ -98,17 +99,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="SignalRecv.cpp" />
-    <ClCompile Include="SignalSend.cpp" />
     <QtRcc Include="hello.qrc" />
     <QtUic Include="hello.ui" />
-    <QtMoc Include="hello.h" />
-    <ClCompile Include="hello.cpp" />
-    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="SignalRecv.h" />
-    <QtMoc Include="SignalSend.h" />
+    <ClCompile Include="src\hello.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\SignalRecv.cpp" />
+    <ClCompile Include="src\SignalSend.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\hello.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\SignalRecv.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\SignalSend.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

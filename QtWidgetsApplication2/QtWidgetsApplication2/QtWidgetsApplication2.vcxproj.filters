@@ -29,29 +29,29 @@
     <QtUic Include="hello.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="hello.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <ClCompile Include="hello.cpp">
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\hello.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SignalRecv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SignalSend.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SignalSend.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SignalRecv.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="SignalSend.h">
+    <QtMoc Include="src\hello.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="SignalRecv.h">
+    <QtMoc Include="src\SignalRecv.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\SignalSend.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
