@@ -12,7 +12,9 @@
 
 ## 环境搭建
 - 参考：</br>
-```https://blog.csdn.net/MelyLenient/article/details/123854069```
+    ```
+    https://blog.csdn.net/MelyLenient/article/details/123854069
+    ```
   QT安装选择msvc2017_64(vs2022兼容此版本)
 - vs2022细节微调：
     1. VS打开Qt的ui界面几秒后闪退（ui无法打开文件）的解决办法
