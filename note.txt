@@ -18,6 +18,10 @@
 		void 类型的函数，没有返回值
 		可以有参数，也可以重载
 		不仅有声明，还得有实现
+	自动设定槽函数
+		函数命名如下：
+		on_<objectName>_<signalName>()
+
 
 4、信号和槽的参数类型
 		信号和槽之间的参数类型不需要一致，但槽的信号类型必须是信号的参数类型的子类
@@ -31,3 +35,30 @@
 	dia->setAttribute(Qt::WA_DeleteOnClose);	//设置关闭时自动删除
 	//非模态对话框只有在父类窗口关闭时才会被销毁
 	//但是如果只关闭对话框，父类窗口不关闭，则一直不会销毁，造成内存泄漏
+
+6、QMessageBox
+	//QMessageBox::information(this, "title", "message");
+	//QMessageBox::warning(this, "title", "message");
+	//QMessageBox::critical(this, "title", "message");
+	//QMessageBox::question(this, "title", "message", QMessageBox::Yes | QMessageBox::No);
+	//QMessageBox::about(this, "title", "message");
+	//QMessageBox::aboutQt(this, "title");
+
+7、事件处理
+	A.事件处理函数为父类的virtual函数，子类需要时override即可，不需要调用，由内核自动调用
+	B.事件分发机制：
+		bool event(QEvent* Event) override;
+		返回true表示事件被处理，返回false表示事件没有被处理，除此之外可由父类
+	C.事件过滤器
+		1.安装事件过滤器
+			installEventFilter(this);
+		2.重载事件过滤器函数
+			bool eventFilter(QObject* obj, QEvent* event) override;
+		3.卸载事件过滤器
+			removeEventFilter(this);
+
+8、QTimer
+	//int TimerID=QTimer::start(1000);	//循环定时器
+	//killTimer(TimerID);
+	定时事件重写函数：
+	void Timer::timerEvent(QTimerEvent* event)

@@ -42,3 +42,6 @@
     ```
 ## 学习笔记
 - 参考  note.txt    
+
+## 添加Qt模块
+- ```属性管理器->属性->QT Project Settings->Qt Modules```
